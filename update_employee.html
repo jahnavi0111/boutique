@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add employee</title>
+    <style>
+              body{
+            background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)) , url("https://i.pinimg.com/564x/2a/2f/f7/2a2ff7a11363cc6b8f473cf407f8f647.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: rgb(0, 0, 0);
+        }
+        .main{
+            text-align: center;
+            margin-top: 3%;
+        }
+        input[type="text"] {
+            width: 30%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1.5px solid yellow;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-left: 35.5%;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        button{
+            margin-right: 10px;
+            margin-top: 40px; 
+            width: 150px;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            background-color: rgb(71, 174, 12);
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(28, 84, 0);
+            color:white;
+        }
+</style>
+</head>
+
+<body>
+    <div class="main">
+    <h1>Update Employee</h1><br>
+    <form action="/update_employee" method="post">
+        <label for="employee_id">Employee ID:</label>
+        <input type="text" name="employee_id" placeholder="Enter Employee's ID" required><br>
+
+        <label for="employee_name">Employee Name:</label>
+        <input type="text" name="employee_name" placeholder="Enter Employee's Name" required><br>
+
+        <label for="employee_contact">Employee contact:</label>
+        <input type="text" name="employee_contact" placeholder="Enter Employee's Contact" required><br>
+
+        <label for="employee_address">Employee Address:</label>
+        <input type="text" name="employee_address" placeholder="Enter Employee's Address" required><br>
+
+        <button type="submit" class="sub">Submit</button>
+    </form>
+    <a href="/"><button>Home</button></a> 
+    <a href="/employees"><button>view Employees</button></a> 
+    </div>
+</body>
+</html>

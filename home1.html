@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Boutique Management System</title>
+    <style>
+    body {
+        margin: 0;
+        background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)) ,url("https://i.pinimg.com/564x/2a/2f/f7/2a2ff7a11363cc6b8f473cf407f8f647.jpg");   
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+    }
+    
+    .navbar {
+        background-color: #000000;
+        overflow: hidden;
+    }
+    
+    .navbar ul {
+        float: right;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navbar li {
+        float: left;
+    }
+    
+    .navbar li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    .navbar li a:hover, .dropdown:hover .dropbtn {
+        background-color: rgb(28, 84, 0);
+    }
+    
+    .dropdown {
+        display: inline-block;
+    }
+    .dropdown-content {
+        background-color: #000000;;
+        min-width: 160px;
+        display: none;
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+        right: 0;
+    }
+    
+    .main-content {
+        padding: 20px;
+        text-align: center;
+        margin-top: 50px;
+    }
+    h1 {
+        font-size: 40px;
+        color: #ffffff;
+        margin-top: 140px;
+    }
+    p {
+        margin-top: 0%;
+        color: #eeeeee;
+    }
+    img{
+        opacity: 0.8;
+        border-radius: 10%;
+        float: right;
+        height: 400px;
+        width: 500px;
+    }
+    #db1{
+        left: 60%;
+        right: 25%;
+    }
+    #db2{
+        left: 70%;
+        right: 20%;
+    }
+    #db3{
+        left: 80%;
+        right: 15%;
+    }
+    #db4{
+        left: 86%;
+    }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Catalogue</a>
+                <div id="db1" class="dropdown-content">
+                    <a href="/cat1">Clothing and apparel</a><br>
+                    <a href="/cat2">Jewelry</a><br>
+                    <a href="/cat3">Greeting cards</a><br>
+                    <a href="/cat4">Makeup</a><br>
+                    <a href="/cat5">Home decor items</a><br>
+                    <a href="/cat6">Cutlery</a><br>
+                    <a href="/cat7">Porcelain</a><br>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">View Data</a>
+                <div id="db2" class="dropdown-content">
+                    <a href="/customers">Customers</a><br>
+                    <a href="/products">Products </a><br>
+                    <a href="/orders">Orders </a><br>
+                    <a href="/employees">Employees </a><br>
+                    <a href="/feedbacks">Feedbacks </a><br>
+                    <a href="/billings">Billings </a><br>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" id="db2" class="dropbtn">Insert Data</a>
+                <div id="db3" class="dropdown-content">
+                    <a href="/add_customer">Customers</a><br>
+                    <a href="/add_product">Products </a><br>
+                    <a href="/add_orders">Orders </a><br>
+                    <a href="/add_employee">Employees </a><br>
+                    <a href="/add_feedback">Feedbacks </a><br>
+                    <a href="/add_billing">Billings </a><br>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Update Data</a>
+                <div id="db4" class="dropdown-content">
+                    <a href="/update_customer">Customers</a><br>
+                    <a href="/update_product">Products </a><br>
+                    <a href="/update_orders">Orders </a><br>
+                    <a href="/update_employee">Employees </a><br>
+                    <a href="/update_employee">Feedbacks </a><br>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <img src="https://wallpapercave.com/wp/wp1877599.jpg">
+        <h1>Boutique Management System!!</h1>
+        <p>Chase the latest fashion, Catch the style.</p>
+    </div>
+</body>
+</html>

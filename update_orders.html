@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Orders</title>
+    <style>
+        body{
+            background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)) , url("https://i.pinimg.com/564x/2a/2f/f7/2a2ff7a11363cc6b8f473cf407f8f647.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: rgb(0, 0, 0);
+        }
+        .main{
+            text-align: center;
+            margin-top: 3%;
+        }
+        input[type="text"] {
+            width: 30%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1.5px solid yellow;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-left: 35.5%;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        button{
+            margin-right: 10px;
+            margin-top: 40px; 
+            width: 150px;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            background-color: rgb(71, 174, 12);
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(28, 84, 0);
+            color:white;
+        }
+</style>
+</head>
+
+<body>
+    <div class="main">
+    <h1>Update Order</h1><br>
+    <form action="/update_orders" method="post">
+        <label for="order_id">Order ID:</label>
+        <input type="text" name="order_id" placeholder="Enter Order's ID" required><br>   
+
+        <label for="product_id">Product ID:</label>
+        <input type="text" name="product_id" placeholder="Enter Product's ID" required><br>
+
+        <label for="customer_id">Customer ID:</label>
+        <input type="text" name="customer_id" placeholder="Enter Customer's ID" required><br>
+
+        <label for="order_date">Order Date:</label>
+        <input type="text" name="order_date" placeholder="Enter Date(yyyy-mm-dd)" required><br>
+
+        <label for="total_amount">Total Amount</label>
+        <input type="text" name="total_amount" placeholder="Enter Total Amount" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/"><button>Home</button></a> 
+    <a href="/orders"><button>View Orders</button></a> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Billing Information</title>
+    <style>
+ body{
+            background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)) , url("https://i.pinimg.com/564x/2a/2f/f7/2a2ff7a11363cc6b8f473cf407f8f647.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: rgb(0, 0, 0);
+        }
+        .main{
+            text-align: center;
+            margin-top: 3%;
+        }
+        input{
+            width: 30%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1.5px solid yellow;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-left: 35.5%;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        button{
+            margin-right: 10px;
+            margin-top: 20px; 
+            width: 150px;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            background-color: rgb(71, 174, 12);
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(28, 84, 0);
+            color:white;
+        }
+    .m1{
+        margin-top: 20px;
+        background-color: white;
+        margin-left: 300px;
+        margin-right: 300px;
+        border: 1.5px solid yellow;
+        border-radius: 10px;
+        padding: 20px;
+    }
+</style>
+</head>
+<body>
+    <div class="main">
+    <h2>Add Billing Information</h2>
+    <form method="POST" action="/add_billing">
+        <label for="order_id">Order ID:</label>
+        <input type="text" id="order_id" name="order_id" required><br><br>
+
+        <label for="cost_of_item">Cost of Item:</label>
+        <input type="text" name="cost_of_item" required><br><br>
+
+        <label for="no_of_items">Number of Items:</label>
+        <input type="number" name="no_of_items" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <div class="m1">
+        {% if total_amount %}
+        <h3>Total Amount:</h3>
+        <p>{{ total_amount }}</p>
+        {% endif %}
+
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>

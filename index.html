@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer List</title>
+</head>
+<body>
+    <ul>
+        {% for customer in customers %}
+            <li><a href="/customer/{{ customer[0] }}">{{ customer[1] }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

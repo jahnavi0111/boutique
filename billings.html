@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <style>
+    body{
+      background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)) , url("https://i.pinimg.com/564x/2a/2f/f7/2a2ff7a11363cc6b8f473cf407f8f647.jpg");
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      color: rgb(0, 0, 0);
+    }
+   .he1{
+      background-color: rgb(166, 255, 114);
+   }
+   .he2{
+      background-color: rgb(255, 255, 255);
+   }    
+   table,h1 {
+      text-indent: 0;
+      border-collapse: collapse;
+      margin-left: 20px;
+      margin-right:20px;
+   }
+    p{
+      margin-top: 10px;
+      margin-left: 70px;
+      margin-right: 70px;
+      margin-bottom: 10px;
+      font-size: larger;
+    }
+    button{
+          border:none;
+          margin-left: 60px;
+          padding: 10px 20px;
+          background-color: rgb(166, 255, 114);
+          cursor: pointer;
+       }
+       button:hover{
+           background-color: rgb(28, 84, 0);
+           color:white;
+       }
+    </style>
+</head>
+<body>
+    <h1>billing Details</h1>
+    <table>
+    <thead class="he1">
+      <tr>
+        <th><p>Order ID     </p></th>
+        <th><p>Cost of item   </p></th>
+        <th><p>No.of items</p></th>
+        <th><p>Total amount</p></th>
+        <th><p>Delete </p></th>
+      </tr>
+      </thead>
+    <tbody class="he2">
+        {% for billing in billings %}
+      <tr>
+        <td><p>{{ billing[0] }}</p></td>
+        <td><p>{{ billing[1] }}</p></td>
+        <td><p>{{ billing[2] }}</p></td>
+        <td><p>{{ billing[3] }}</p></td>
+        <td>
+          <form method="post">
+              <input type="hidden" name="order_id" value="{{ billing[0] }}">
+              <button type="submit">Delete</button>
+          </form>
+      </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    </table><br>
+    <a href="/"><button>Home</button></a>
+</body>
+</html>

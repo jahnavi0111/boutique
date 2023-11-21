@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Employees data</title>
+    <style>
+      body{
+        background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)) , url("https://i.pinimg.com/564x/2a/2f/f7/2a2ff7a11363cc6b8f473cf407f8f647.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        color: rgb(0, 0, 0);
+        }
+       .he1{
+        background-color: rgb(166, 255, 114);
+        padding-top: 20px;
+       }
+       .he2{
+        background-color: rgb(255, 255, 255);
+       }    
+       table,h1 {
+        text-indent: 0;
+        border-collapse: collapse;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right:20px;
+       }
+      p{
+        margin-top: 10px;
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-bottom: 10px;
+        font-size: larger;
+      }
+      button{
+            border:none;
+            margin-top: 20px;
+            margin-left: 60px;
+            padding: 10px 20px;
+            background-color: rgb(92, 228, 13);
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(28, 84, 0);
+            color:white;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration:underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employees</h1>
+    <table class="he1">
+        <thead>
+            <th><p>Employee Name<p></th>
+        </thead>
+        <tbody class="he2">
+        {% for employee in employees %}
+            <tr>
+                <td><p><a href="/employee/{{ employee[0] }}">{{ employee[1] }}</a></p><td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="/"><button>Home</button></a>
+</body>
+</html>

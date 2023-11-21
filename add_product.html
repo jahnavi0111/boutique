@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add product</title>
+    <style>
+            body{
+            background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)) , url("https://i.pinimg.com/564x/2a/2f/f7/2a2ff7a11363cc6b8f473cf407f8f647.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: rgb(0, 0, 0);
+        }
+        .main{
+            text-align: center;
+            margin-top: 3%;
+        }
+        input[type="text"] {
+            width: 30%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1.5px solid yellow;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-left: 35.5%;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        button{
+            margin-right: 10px;
+            margin-top: 40px; 
+            width: 150px;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            background-color: rgb(71, 174, 12);
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(28, 84, 0);
+            color:white;
+        }
+</style>
+</head>
+
+<body>
+    <div class="main">
+    <h1>Add New Product</h1><br>
+    <form action="/add_product" method="post">
+        <label for="product_id">Product ID:</label>
+        <input type="text" name="product_id" placeholder="Enter Product's ID" required><br>
+
+        <label for="product_name">product Name:</label>
+        <input type="text" name="product_name" placeholder="Enter Product's Name" required><br>
+
+        <label for="product_price">Product price:</label>
+        <input type="text" name="product_price" placeholder="Enter Product's Price" required><br>
+
+        <label for="stock">No.of items in Stock</label>
+        <input type="text" name="stock" placeholder="Enter No.of Products" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/"><button>Home</button></a> 
+    <a href="/products"><button>View Products</button></a> 
+    </div>
+</body>
+</html>
